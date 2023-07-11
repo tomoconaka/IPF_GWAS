@@ -1,0 +1,7 @@
+mkdir -p /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.final
+bcftools isec -p /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.final -Oz /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.7.case.vcf.gz /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.7.control.vcf.gz
+[W::bcf_hdr_check_sanity] PL should be declared as Number=G
+#tabix -p vcf 2.final/0002.vcf.gz
+#tabix -p vcf 2.final/0003.vcf.gz
+bcftools merge /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.final/0002.vcf.gz /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.final/0003.vcf.gz -Oz -o /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.final.vcf.gz
+[W::bcf_hdr_check_sanity] PL should be declared as Number=G

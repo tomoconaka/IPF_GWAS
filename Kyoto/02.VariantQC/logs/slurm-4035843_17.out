@@ -1,0 +1,13 @@
+bcftools view -S /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//SampleQC.tokeep.All.sample --force-samples /home/nagasaki/workspace/pipeline/output/VQSR.v3/all.VQSR3.chr17.vcf.gz -Oz -o /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.vcf.gz
+bcftools norm -m - /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.vcf.gz -Oz -o /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.1.vcf.gz
+Lines   total/split/realigned/skipped:	3999107/504340/0/0
+bcftools annotate --set-id +'%CHROM\:%POS\_%REF\/%FIRST_ALT' /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.1.vcf.gz -Oz -o /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.2.vcf.gz
+bcftools filter -i 'FILTER="PASS"' /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.2.vcf.gz -Oz -o /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.3.vcf.gz
+tabix -p vcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.3.vcf.gz
+source ~/anaconda3/bin/activate hail
+python HailgenotypeQC.py 17
+Traceback (most recent call last):
+  File "HailgenotypeQC.py", line 1, in <module>
+    import hail as hl
+ModuleNotFoundError: No module named 'hail'
+make: *** [Makefile:34: /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.4.vcf.bgz] Error 1

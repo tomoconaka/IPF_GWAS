@@ -1,0 +1,143 @@
+/var/spool/slurm/d/job4274822/slurm_script: line 16: cd: /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/repo/ILD_GWAS/06.associations: No such file or directory
+Start time: Tue Sep  6 14:25:41 2022
+
+              |=============================|
+              |      REGENIE v3.1.2.gz      |
+              |=============================|
+
+Copyright (c) 2020-2022 Joelle Mbatchou, Andrey Ziyatdinov and Jonathan Marchini.
+Distributed under the MIT License.
+Compiled with Boost Iostream library.
+Using Intel MKL with Eigen.
+
+Log of output saved in file : /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/GWAS/chrX.log
+
+Options in effect:
+  --step 2 \
+  --bed /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/chrX \
+  --phenoFile /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/pheno.txt \
+  --phenoColList IPF,ILD,FPF,sIPF \
+  --covarFile /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/pheno.txt \
+  --covarColList age,PC1,PC2,PC3,PC4,PC5 \
+  --catCovarList geneticSex \
+  --exclude /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/chrX.toexclude.snplist \
+  --bt \
+  --bsize 400 \
+  --threads 20 \
+  --firth \
+  --approx \
+  --firth-se \
+  --pThresh 0.01 \
+  --pred /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/GWAS/pheno_step1_pred.list \
+  --out /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/GWAS/chrX
+
+Association testing mode with fast multithreading using OpenMP
+ * bim              : [/mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/chrX.bim] n_snps = 25033
+   -removing variants specified by --exclude
+   -number of variants remaining in the analysis = 24915
+ * fam              : [/mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/chrX.fam] n_samples = 3439
+ * bed              : [/mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/chrX.bed]
+ * phenotypes       : [/mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/pheno.txt] n_pheno = 4
+   -number of phenotyped individuals  = 3393
+ * covariates       : [/mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/pheno.txt] n_cov = 7
+   -number of individuals with covariate data = 3393
+ * number of individuals used in analysis = 3393
+ * case-control counts for each trait:
+   - 'IPF': 269 cases and 3095 controls
+   - 'ILD': 298 cases and 3095 controls
+   - 'FPF': 64 cases and 3095 controls
+   - 'sIPF': 234 cases and 3095 controls
+ * LOCO predictions : [/mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/GWAS/pheno_step1_pred.list]
+   -file [/mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/GWAS/pheno_step1_1.loco] for phenotype 'IPF'
+   -file [/mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/GWAS/pheno_step1_2.loco] for phenotype 'ILD'
+   -file [/mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/GWAS/pheno_step1_3.loco] for phenotype 'FPF'
+   -file [/mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/GWAS/pheno_step1_4.loco] for phenotype 'sIPF'
+ * # threads        : [20]
+ * block size       : [400]
+ * # blocks         : [63]
+ * approximate memory usage : 26MB
+ * using minimum MAC of 5 (variants with lower MAC are ignored)
+ * using fast Firth correction for logistic regression p-values less than 0.01
+    - using back-correction to compute Firth SE
+
+Chromosome 23 [63 blocks in total]
+   -reading loco predictions for the chromosome...done (21ms) 
+   -fitting null logistic regression on binary phenotypes...done (831ms) 
+   -fitting null Firth logistic regression on binary phenotypes...done (97ms) 
+ block [1/63] : done (39ms) 
+ block [2/63] : done (22ms) 
+ block [3/63] : done (24ms) 
+ block [4/63] : done (19ms) 
+ block [5/63] : done (14ms) 
+ block [6/63] : done (12ms) 
+ block [7/63] : done (11ms) 
+ block [8/63] : done (13ms) 
+ block [9/63] : done (13ms) 
+ block [10/63] : done (13ms) 
+ block [11/63] : done (9ms) 
+ block [12/63] : done (14ms) 
+ block [13/63] : done (15ms) 
+ block [14/63] : done (13ms) 
+ block [15/63] : done (16ms) 
+ block [16/63] : done (9ms) 
+ block [17/63] : done (8ms) 
+ block [18/63] : done (10ms) 
+ block [19/63] : done (10ms) 
+ block [20/63] : done (7ms) 
+ block [21/63] : done (7ms) 
+ block [22/63] : done (11ms) 
+ block [23/63] : done (9ms) 
+ block [24/63] : done (30ms) 
+ block [25/63] : done (10ms) 
+ block [26/63] : done (11ms) 
+ block [27/63] : done (12ms) 
+ block [28/63] : done (9ms) 
+ block [29/63] : done (24ms) 
+ block [30/63] : done (11ms) 
+ block [31/63] : done (10ms) 
+ block [32/63] : done (9ms) 
+ block [33/63] : done (11ms) 
+ block [34/63] : done (10ms) 
+ block [35/63] : done (15ms) 
+ block [36/63] : done (12ms) 
+ block [37/63] : done (12ms) 
+ block [38/63] : done (8ms) 
+ block [39/63] : done (9ms) 
+ block [40/63] : done (9ms) 
+ block [41/63] : done (9ms) 
+ block [42/63] : done (12ms) 
+ block [43/63] : done (28ms) 
+ block [44/63] : done (14ms) 
+ block [45/63] : done (14ms) 
+ block [46/63] : done (13ms) 
+ block [47/63] : done (15ms) 
+ block [48/63] : done (14ms) 
+ block [49/63] : done (11ms) 
+ block [50/63] : done (11ms) 
+ block [51/63] : done (7ms) 
+ block [52/63] : done (11ms) 
+ block [53/63] : done (12ms) 
+ block [54/63] : done (15ms) 
+ block [55/63] : done (13ms) 
+ block [56/63] : done (8ms) 
+ block [57/63] : done (12ms) 
+ block [58/63] : done (8ms) 
+ block [59/63] : done (11ms) 
+ block [60/63] : done (14ms) 
+ block [61/63] : done (15ms) 
+ block [62/63] : done (12ms) 
+ block [63/63] : done (3ms) 
+
+Association results stored separately for each trait in files : 
+* [/mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/GWAS/chrX_IPF.regenie]
+* [/mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/GWAS/chrX_ILD.regenie]
+* [/mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/GWAS/chrX_FPF.regenie]
+* [/mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/GWAS/chrX_sIPF.regenie]
+
+Number of tests with Firth correction : 886
+Number of failed tests : (0/886)
+Number of ignored tests due to low MAC : 50883
+
+Elapsed time : 2.45486s
+End time: Tue Sep  6 14:25:44 2022
+

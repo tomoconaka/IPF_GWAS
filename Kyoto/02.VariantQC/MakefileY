@@ -1,0 +1,60 @@
+
+master.vcf=/home/nagasaki/workspace/pipeline/output/VQSR_sexchr/all.VQSR3.chrY.vcf.gz
+CHR=Y
+
+all: run1 run2 run3 run4 run5 run6 run7 run8 run9
+
+#step1 restrict to AGP3000 and IP
+run1:$(CHR).vcf.gz
+$(CHR).vcf.gz:$(master.vcf)
+	bcftools view -S all.sample -r chr$(CHR) --force-samples $< -Oz -o $@
+
+#step2 split the multi alleleic variants
+run2:$(CHR).1.vcf.gz
+$(CHR).1.vcf.gz:$(CHR).vcf.gz
+	bcftools norm -m - $< -Oz -o $@
+
+#step3 annotate the variants
+run3:$(CHR).2.vcf.gz
+$(CHR).2.vcf.gz:$(CHR).1.vcf.gz
+	bcftools annotate --set-id +'%CHROM\:%POS\_%REF\/%FIRST_ALT' $< -Oz -o $@
+
+#step4 VQSR PASS
+run4:$(CHR).3.vcf.gz
+$(CHR).3.vcf.gz:$(CHR).2.vcf.gz
+	bcftools filter -i 'FILTER="PASS"' $< -Oz -o $@
+	tabix -p vcf $@
+
+#step5 genotype hard filter (GQ > 20, DP > 10, AB > 0.2)
+run5:$(CHR).4.vcf.bgz
+$(CHR).4.vcf.bgz:$(CHR).3.vcf.gz
+	source ~/anaconda3/bin/activate hail
+	python hailgenotypeQC.py $(CHR)
+	zcat $@ | bgzip -c > $(CHR).4.vcf.gz
+
+#step6 hwe filter
+run6:$(CHR).5.vcf.gz
+$(CHR).5.vcf.gz:$(CHR).4.vcf.bgz
+	vcftools --gzvcf $< --hwe 0.000001 --recode --stdout | bgzip -c > $@
+
+#step8 call rate case/control
+run7:$(CHR).6.case.vcf.gz
+$(CHR).6.case.vcf.gz:$(CHR).5.vcf.gz
+	vcftools --gzvcf $< --keep IP.sample --recode --stdout | bgzip -c > $@
+	vcftools --gzvcf $< --keep AGP3000.sample --recode --stdout | bgzip -c > $(CHR).6.control.vcf.gz
+	vcftools --gzvcf $(CHR).6.case.vcf.gz --max-missing 0.80 --recode --stdout | bgzip -c > $(CHR).7.case.vcf.gz
+	vcftools --gzvcf $(CHR).6.control.vcf.gz --max-missing 0.80 --recode --stdout | bgzip -c > $(CHR).7.control.vcf.gz
+	tabix -p vcf $(CHR).7.case.vcf.gz
+	tabix -p vcf $(CHR).7.control.vcf.gz
+
+#step8 merge case/control
+run8:$(CHR).final/0002.vcf.gz
+$(CHR).final/0002.vcf.gz:$(CHR).7.case.vcf.gz
+	mkdir -p $(CHR).final
+	bcftools isec -p $(CHR).final -Oz $< $(CHR).7.control.vcf.gz
+	#tabix -p vcf $(CHR).final/0002.vcf.gz
+	#tabix -p vcf $(CHR).final/0003.vcf.gz
+
+run9:$(CHR).final.vcf.gz
+$(CHR).final.vcf.gz:$(CHR).final/0002.vcf.gz
+	bcftools merge $< $(CHR).final/0003.vcf.gz -Oz -o $@

@@ -1,0 +1,128 @@
+Smartmatch is experimental at /opt/vep/Plugins/loftee/de_novo_donor.pl line 175.
+Smartmatch is experimental at /opt/vep/Plugins/loftee/de_novo_donor.pl line 214.
+Smartmatch is experimental at /opt/vep/Plugins/loftee/splice_site_scan.pl line 191.
+Smartmatch is experimental at /opt/vep/Plugins/loftee/splice_site_scan.pl line 194.
+Smartmatch is experimental at /opt/vep/Plugins/loftee/splice_site_scan.pl line 238.
+Smartmatch is experimental at /opt/vep/Plugins/loftee/splice_site_scan.pl line 241.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 188428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 188428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 188428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 188428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 188428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 188428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 1488428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 1488428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 1613428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 1613428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 1613428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 1613428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 1613428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 1613428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 1613428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 1613428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 1613428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 1613428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 1613428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 1613428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 1613428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 1613428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 2058428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 2058428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 2058428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 2058428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 2058428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 2058428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 2058428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 2058428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 5343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 5343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 6343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 6343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 6343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 6343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 6343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 6343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 6343428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 6343428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 7218428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 7218428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 7218428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 7218428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 7218428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 7218428.
+Use of uninitialized value in split at /opt/vep/Plugins/loftee/LoF.pm line 562, <$fh> line 7218428.
+Use of uninitialized value $number_of_exons in subtraction (-) at /opt/vep/Plugins/loftee/LoF.pm line 575, <$fh> line 7218428.

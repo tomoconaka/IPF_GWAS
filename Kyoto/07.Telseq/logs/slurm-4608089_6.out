@@ -1,0 +1,38 @@
+Start analysing BAM bams/HVUM1084.bam
+Specified BAM has 1 read groups
+[scan] processed 10000000 reads 
+[scan] processed 20000000 reads 
+[scan] processed 30000000 reads 
+[scan] processed 40000000 reads 
+[scan] processed 50000000 reads 
+[scan] processed 60000000 reads 
+[scan] processed 70000000 reads 
+[scan] processed 80000000 reads 
+[scan] processed 90000000 reads 
+[scan] processed 100000000 reads 
+[scan] processed 110000000 reads 
+[scan] processed 120000000 reads 
+[scan] processed 130000000 reads 
+[scan] processed 140000000 reads 
+[scan] processed 150000000 reads 
+[scan] processed 160000000 reads 
+[scan] processed 170000000 reads 
+[scan] processed 180000000 reads 
+[scan] processed 190000000 reads 
+[scan] processed 200000000 reads 
+[scan] processed 210000000 reads 
+[scan] processed 220000000 reads 
+[scan] processed 230000000 reads 
+[scan] processed 240000000 reads 
+[scan] processed 250000000 reads 
+[scan] processed 260000000 reads 
+[scan] processed 270000000 reads 
+[scan] processed 280000000 reads 
+[scan] processed 290000000 reads 
+[scan] processed 300000000 reads 
+[scan] processed 310000000 reads 
+[scan] processed 320000000 reads 
+[scan] total reads in BAM scanned 320843304
+Completed scanning BAM
+Completed writing results
+[timer - scan BAM] wall clock: 1789.73s CPU: 1789.47s

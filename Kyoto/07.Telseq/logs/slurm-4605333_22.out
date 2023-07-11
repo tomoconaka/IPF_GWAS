@@ -1,0 +1,18 @@
+Start analysing BAM bams/PFKT0746.bam
+Specified BAM has 1 read groups
+[scan] processed 10000000 reads 
+[scan] processed 20000000 reads 
+[scan] processed 30000000 reads 
+[scan] processed 40000000 reads 
+[scan] processed 50000000 reads 
+[scan] processed 60000000 reads 
+[scan] processed 70000000 reads 
+[scan] processed 80000000 reads 
+[scan] processed 90000000 reads 
+[scan] processed 100000000 reads 
+[scan] processed 110000000 reads 
+[scan] processed 120000000 reads 
+[scan] processed 130000000 reads 
+[scan] processed 140000000 reads 
+[scan] processed 150000000 reads 
+slurmstepd: error: *** JOB 4605355 ON dgx1 CANCELLED AT 2022-09-13T19:02:07 DUE TO TIME LIMIT ***

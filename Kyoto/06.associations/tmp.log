@@ -1,0 +1,19 @@
+PLINK v1.90b6.21 64-bit (19 Oct 2020)
+Options in effect:
+  --bfile /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch/chr20
+  --extract /dev/fd/63
+  --make-bed
+  --out tmp
+
+Hostname: ngs7.genome.med.kyoto-u.ac.jp
+Working directory: /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/repo/IPF_GWAS/Kyoto/06.associations
+Start time: Wed Sep 14 21:17:10 2022
+
+Random number seed: 1663157830
+515693 MB RAM detected; reserving 257846 MB for main workspace.
+2061028 variants loaded from .bim file.
+3439 people (0 males, 0 females, 3439 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to tmp.nosex .
+Error: No variants remaining after --extract.
+
+End time: Wed Sep 14 21:17:13 2022

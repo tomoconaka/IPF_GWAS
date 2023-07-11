@@ -1,0 +1,4 @@
+Start analysing BAM bams/TLKU0673.bam
+Specified BAM has 1 read groups
+[scan] processed 10000000 reads 
+slurmstepd: error: *** JOB 4605419 ON dgx1 CANCELLED AT 2022-09-13T19:02:07 DUE TO TIME LIMIT ***

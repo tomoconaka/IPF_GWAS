@@ -1,0 +1,17 @@
+bcftools view -S /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//SampleQC.tokeep.All.sample --force-samples /home/nagasaki/workspace/pipeline/output/VQSR.v3/all.VQSR3.chrX.vcf.gz -Oz -o /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//X.vcf.gz
+bcftools norm -m - /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//X.vcf.gz -Oz -o /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//X.1.vcf.gz
+Lines   total/split/realigned/skipped:	4442923/367757/0/0
+bcftools annotate --set-id +'%CHROM\:%POS\_%REF\/%FIRST_ALT' /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//X.1.vcf.gz -Oz -o /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//X.2.vcf.gz
+bcftools filter -i 'FILTER="PASS"' /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//X.2.vcf.gz -Oz -o /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//X.3.vcf.gz
+tabix -p vcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//X.3.vcf.gz
+bcftools view -S /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//all.sample.female --force-samples /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//X.3.vcf.gz -Oz -o /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//X.3.female.vcf.gz
+tabix -p vcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//X.3.female.vcf.gz
+bcftools view -S /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//all.sample.male --force-samples /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//X.3.vcf.gz -Oz -o /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//X.3.male.vcf.gz
+tabix -p vcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//X.3.male.vcf.gz
+source ~/anaconda3/bin/activate hail
+python HailgenotypeQC.X.female.py X
+Traceback (most recent call last):
+  File "HailgenotypeQC.X.female.py", line 1, in <module>
+    import hail as hl
+ModuleNotFoundError: No module named 'hail'
+make: *** [MakefileX:43: /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//X.4.female.vcf.bgz] Error 1

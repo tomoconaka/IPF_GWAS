@@ -1,0 +1,72 @@
+vcftools --gzvcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.5.vcf.gz --keep /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//SampleQC.tokeep.ILD.sample --recode --stdout | bgzip -c > /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.6.case.vcf.gz
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.5.vcf.gz
+	--keep /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//SampleQC.tokeep.ILD.sample
+	--recode
+	--stdout
+
+Using zlib version: 1.2.11
+Keeping individuals in 'keep' list
+After filtering, kept 298 out of 3439 Individuals
+Outputting VCF file...
+After filtering, kept 9452050 out of a possible 9452050 Sites
+Run Time = 43888.00 seconds
+vcftools --gzvcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.5.vcf.gz --keep /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//SampleQC.tokeep.AGP3000.sample --recode --stdout | bgzip -c > /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.6.control.vcf.gz
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.5.vcf.gz
+	--keep /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//SampleQC.tokeep.AGP3000.sample
+	--recode
+	--stdout
+
+Using zlib version: 1.2.11
+Keeping individuals in 'keep' list
+After filtering, kept 3141 out of 3439 Individuals
+Outputting VCF file...
+After filtering, kept 9452050 out of a possible 9452050 Sites
+Run Time = 239034.00 seconds
+vcftools --gzvcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.6.case.vcf.gz --max-missing 0.80 --recode --stdout | bgzip -c > /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.7.case.vcf.gz
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.6.case.vcf.gz
+	--max-missing 0.8
+	--recode
+	--stdout
+
+Using zlib version: 1.2.11
+After filtering, kept 298 out of 298 Individuals
+Outputting VCF file...
+After filtering, kept 8003910 out of a possible 9452050 Sites
+Run Time = 19360.00 seconds
+vcftools --gzvcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.6.control.vcf.gz --max-missing 0.80 --recode --stdout | bgzip -c > /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.7.control.vcf.gz
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.6.control.vcf.gz
+	--max-missing 0.8
+	--recode
+	--stdout
+
+Using zlib version: 1.2.11
+After filtering, kept 3141 out of 3141 Individuals
+Outputting VCF file...
+After filtering, kept 8194863 out of a possible 9452050 Sites
+Run Time = 212181.00 seconds
+tabix -p vcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.7.case.vcf.gz
+tabix -p vcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.7.control.vcf.gz
+mkdir -p /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.final
+bcftools isec -p /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.final -Oz /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.7.case.vcf.gz /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//2.7.control.vcf.gz
+[W::bcf_hdr_check_sanity] PL should be declared as Number=G
+slurmstepd: error: *** JOB 4058139 ON ngs6 CANCELLED AT 2022-07-12T22:07:35 DUE TO TIME LIMIT ***

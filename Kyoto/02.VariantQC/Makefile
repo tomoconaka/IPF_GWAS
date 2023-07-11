@@ -1,0 +1,62 @@
+CHR=21
+master.vcf=/home/nagasaki/workspace/pipeline/output/VQSR.v3/all.VQSR3.chr$(CHR).vcf.gz
+all: run5
+#all: run1 run2 run3 run4
+#DIR=../01.SampleQC/06.CallRate/
+#step1 restrict to AGP3000 and IP
+SCRATCH=/mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/Kyoto_scratch/
+#cd $(SCRATCH)
+
+##run1:$(SCRATCH)/$(CHR).vcf.gz
+##$(SCRATCH)/$(CHR).vcf.gz:$(master.vcf)
+##	bcftools view -S $(SCRATCH)/SampleQC.tokeep.All.sample --force-samples $< -Oz -o $@
+
+#step2 split the multi alleleic variants
+##run2:$(SCRATCH)/$(CHR).1.vcf.gz
+##$(SCRATCH)/$(CHR).1.vcf.gz:$(SCRATCH)/$(CHR).vcf.gz
+##	bcftools norm -m - $< -Oz -o $@
+
+#step3 annotate the variants
+##run3:$(SCRATCH)/$(CHR).2.vcf.gz
+##$(SCRATCH)/$(CHR).2.vcf.gz:$(SCRATCH)/$(CHR).1.vcf.gz
+##	bcftools annotate --set-id +'%CHROM\:%POS\_%REF\/%FIRST_ALT' $< -Oz -o $@
+
+#step4 VQSR PASS
+run4:$(SCRATCH)/$(CHR).3.vcf.gz
+$(SCRATCH)/$(CHR).3.vcf.gz:$(SCRATCH)/$(CHR).2.vcf.gz
+	bcftools filter -i 'FILTER="PASS"' $< -Oz -o $@
+	tabix -p vcf $@
+
+#step5 genotype hard filter (GQ > 20, DP > 10, AB > 0.2)
+run5:$(SCRATCH)/$(CHR).final.vcf.bgz
+$(SCRATCH)/$(CHR).final.vcf.bgz:$(SCRATCH)/$(CHR).3.vcf.gz
+	source ~/anaconda3/bin/activate hail
+	python HailgenotypeQC.py $(CHR)
+
+#step6 hwe filter
+##run6:$(SCRATCH)/$(CHR).5.vcf.gz
+##$(SCRATCH)/$(CHR).5.vcf.gz:$(SCRATCH)/$(CHR).4.vcf.bgz
+##	source ~/anaconda3/bin/deactivate
+##	vcftools --gzvcf $< --hwe 0.000001 --recode --stdout | bgzip -c > $@
+
+#step8 call rate case/control
+##run7:$(SCRATCH)/$(CHR).5.case.vcf.gz
+##$(SCRATCH)/$(CHR).5.case.vcf.gz:$(SCRATCH)/$(CHR).4.vcf.bgz
+##	vcftools --gzvcf $< --keep $(SCRATCH)/SampleQC.tokeep.ILD.sample --recode --stdout | bgzip -c > $@
+##	vcftools --gzvcf $< --keep $(SCRATCH)/SampleQC.tokeep.AGP3000.sample --recode --stdout | bgzip -c > $(SCRATCH)/$(CHR).5.control.vcf.gz
+##	vcftools --gzvcf $(SCRATCH)/$(CHR).5.case.vcf.gz --max-missing 0.80 --recode --stdout | bgzip -c > $(SCRATCH)/$(CHR).6.case.vcf.gz
+##	vcftools --gzvcf $(SCRATCH)/$(CHR).5.control.vcf.gz --max-missing 0.80 --recode --stdout | bgzip -c > $(SCRATCH)/$(CHR).6.control.vcf.gz
+##	tabix -p vcf $(SCRATCH)/$(CHR).6.case.vcf.gz
+##	tabix -p vcf $(SCRATCH)/$(CHR).6.control.vcf.gz
+
+#step8 merge case/control
+##run8:$(SCRATCH)/$(CHR).final/0002.vcf.gz
+##$(SCRATCH)/$(CHR).final/0002.vcf.gz:$(SCRATCH)/$(CHR).6.case.vcf.gz
+##	mkdir -p $(SCRATCH)/$(CHR).final
+##	bcftools isec -p $(SCRATCH)/$(CHR).final -Oz $< $(SCRATCH)/$(CHR).6.control.vcf.gz -n=2
+##	tabix -p vcf $(CHR).final/0003.vcf.gz
+##	tabix -p vcf $(CHR).final/0004.vcf.gz
+
+##run9:$(SCRATCH)/$(CHR).final.vcf.gz
+##$(SCRATCH)/$(CHR).final.vcf.gz:$(SCRATCH)/$(CHR).final/0002.vcf.gz
+##	bcftools merge $< $(SCRATCH)/$(CHR).final/0003.vcf.gz -Oz -o $@

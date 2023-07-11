@@ -1,0 +1,75 @@
+vcftools --gzvcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.5.vcf.gz --keep /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//SampleQC.tokeep.ILD.sample --recode --stdout | bgzip -c > /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.6.case.vcf.gz
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.5.vcf.gz
+	--keep /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//SampleQC.tokeep.ILD.sample
+	--recode
+	--stdout
+
+Using zlib version: 1.2.11
+Keeping individuals in 'keep' list
+After filtering, kept 298 out of 3439 Individuals
+Outputting VCF file...
+After filtering, kept 3315671 out of a possible 3315671 Sites
+Run Time = 13495.00 seconds
+vcftools --gzvcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.5.vcf.gz --keep /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//SampleQC.tokeep.AGP3000.sample --recode --stdout | bgzip -c > /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.6.control.vcf.gz
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.5.vcf.gz
+	--keep /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//SampleQC.tokeep.AGP3000.sample
+	--recode
+	--stdout
+
+Using zlib version: 1.2.11
+Keeping individuals in 'keep' list
+After filtering, kept 3141 out of 3439 Individuals
+Outputting VCF file...
+After filtering, kept 3315671 out of a possible 3315671 Sites
+Run Time = 84244.00 seconds
+vcftools --gzvcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.6.case.vcf.gz --max-missing 0.80 --recode --stdout | bgzip -c > /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.7.case.vcf.gz
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.6.case.vcf.gz
+	--max-missing 0.8
+	--recode
+	--stdout
+
+Using zlib version: 1.2.11
+After filtering, kept 298 out of 298 Individuals
+Outputting VCF file...
+After filtering, kept 2593680 out of a possible 3315671 Sites
+Run Time = 6357.00 seconds
+vcftools --gzvcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.6.control.vcf.gz --max-missing 0.80 --recode --stdout | bgzip -c > /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.7.control.vcf.gz
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.6.control.vcf.gz
+	--max-missing 0.8
+	--recode
+	--stdout
+
+Using zlib version: 1.2.11
+After filtering, kept 3141 out of 3141 Individuals
+Outputting VCF file...
+After filtering, kept 2653746 out of a possible 3315671 Sites
+Run Time = 70482.00 seconds
+tabix -p vcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.7.case.vcf.gz
+tabix -p vcf /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.7.control.vcf.gz
+mkdir -p /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.final
+bcftools isec -p /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.final -Oz /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.7.case.vcf.gz /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.7.control.vcf.gz
+[W::bcf_hdr_check_sanity] PL should be declared as Number=G
+#tabix -p vcf 17.final/0002.vcf.gz
+#tabix -p vcf 17.final/0003.vcf.gz
+bcftools merge /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.final/0002.vcf.gz /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.final/0003.vcf.gz -Oz -o /mnt/gpfs1/project/Interstitial_Pneumonia/ANALYSIS/tnakanishi/scratch//17.final.vcf.gz
+[W::bcf_hdr_check_sanity] PL should be declared as Number=G
